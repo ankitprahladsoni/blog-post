@@ -69,78 +69,82 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+$expandedHeight: 150px;
+$collapsedHeight: 50px;
+
 nav {
   transition: all 0.5s ease;
+  div a img {
+    transition: all 0.5s ease;
+    height: $expandedHeight;
+    width: $expandedHeight;
+    border-radius: 50%;
+  }
 }
 
-nav div a img {
-  transition: all 0.5s ease;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-}
-
-#navbar-section.expand {
-  height: 150px;
-}
-
-#navbar-section.collapse {
-  height: min-content;
-  padding-bottom: 0px;
+#navbar-section {
+  &.expand {
+    height: $expandedHeight;
+  }
+  &.collapse {
+    height: min-content;
+    padding-bottom: 0px;
+  }
 }
 
 nav.expand {
-  height: 150px;
+  height: $expandedHeight;
   align-items: flex-end;
   transition: all 0.5s ease;
+
+  div div.navbar-menu {
+    transition: all 0.5s ease;
+    height: $expandedHeight;
+    align-items: flex-end;
+  }
 }
 
 nav.collapse {
   height: 0px;
   align-items: flex-end;
   transition: all 0.5s ease;
-}
 
-nav.expand div div.navbar-menu {
-  transition: all 0.5s ease;
-  height: 150px;
-  align-items: flex-end;
-}
+  div {
+    div.navbar-menu {
+      transition: all 0.5s ease;
+      height: $collapsedHeight;
+    }
 
-nav.collapse div div.navbar-menu {
-  transition: all 0.5s ease;
-  height: 50px;
-}
-
-nav.collapse div a img {
-  transition: all 0.5s ease;
-  height: 50px;
-  width: 50px;
-}
-
-.navbar-item img {
-  max-height: unset;
+    a img {
+      transition: all 0.5s ease;
+      height: $collapsedHeight;
+      width: $collapsedHeight;
+    }
+  }
 }
 
 .navbar-item {
   padding-top: 0px;
   padding-bottom: 15px;
+  img {
+    max-height: unset;
+  }
 }
 
 #title {
   width: 100%;
   text-align: center;
   font-family: unset;
-}
 
-#title.expand {
-  font-size: 100px;
-  transition: all 0.5s ease;
-}
+  &.expand {
+    font-size: 100px;
+    transition: all 0.5s ease;
+  }
 
-#title.collapse {
-  font-size: 40px;
-  transition: all 0.5s ease;
+  &.collapse {
+    font-size: 40px;
+    transition: all 0.5s ease;
+  }
 }
 
 #avatarDiv {
