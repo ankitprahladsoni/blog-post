@@ -37,32 +37,37 @@
 import Vue from 'vue';
 export default Vue.extend({
   mounted() {
-    window.addEventListener('scroll', (e) => {
-      const nav: Element = document.querySelector('nav') as HTMLElement;
-      const navSection: Element = document.querySelector('#navbar-section') as HTMLElement;
-      const title: Element = document.querySelector('#title') as HTMLElement;
-      const divs: Element[] = [nav, navSection, title];
+    window.addEventListener('scroll', e => {
+      const elements: Element[] = this.getElementsFromSelectors(
+        'nav',
+        '#navbar-section',
+        '#title',
+      );
 
       if (window.scrollY) {
-        this.collapse(divs);
+        this.collapse(elements);
       } else {
-        this.expand(divs);
+        this.expand(elements);
       }
     });
   },
   methods: {
-    collapse(divs: Element[]) {
-      divs.forEach((div) => {
-        div.classList.add('collapse');
-        div.classList.remove('expand');
+    collapse(elements: Element[]) {
+      elements.map(element => element.classList).forEach(classes => {
+        classes.add('collapse');
+        classes.remove('expand');
       });
     },
 
-    expand(divs: Element[]) {
-      divs.forEach((div) => {
-        div.classList.remove('collapse');
-        div.classList.add('expand');
+    expand(elements: Element[]) {
+      elements.map(element => element.classList).forEach(classes => {
+        classes.add('expand');
+        classes.remove('expcollapseand');
       });
+    },
+
+    getElementsFromSelectors(...selectors: string[]) {
+      return selectors.map(s => document.querySelector(s) as Element);
     },
   },
 });
@@ -126,6 +131,7 @@ nav.collapse {
 .navbar-item {
   padding-top: 0px;
   padding-bottom: 15px;
+
   img {
     max-height: unset;
   }
