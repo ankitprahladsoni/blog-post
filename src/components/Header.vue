@@ -62,7 +62,7 @@ export default Vue.extend({
     expand(elements: Element[]) {
       elements.map(element => element.classList).forEach(classes => {
         classes.add('expand');
-        classes.remove('expcollapseand');
+        classes.remove('collapse');
       });
     },
 
