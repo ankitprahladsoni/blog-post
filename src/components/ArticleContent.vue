@@ -132,6 +132,7 @@ export default Vue.extend({
   },
   created() {
     window.addEventListener('scroll', this.handleScroll);
+    this.$emit('scroll', 1);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
