@@ -113,14 +113,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import HTMLUtils from '@/utils/html-utils.ts';
 export default Vue.extend({
   methods: {
     handleScroll(event: Event) {
-      const elements: HTMLElement[] = [
-        ...(document.querySelectorAll('div[id="content"]>div>h1') as NodeListOf<
-          HTMLElement
-        >),
-      ];
+      const subHeadingSelector = 'div[id="content"]>div>h1';
+      const elements = HTMLUtils.getAllElementsBySelector(subHeadingSelector);
+
       const height: number = window.scrollY + 200;
       const filtered = elements.filter(el => el.offsetTop < height);
       const lastElement: HTMLElement | undefined = filtered.pop();
