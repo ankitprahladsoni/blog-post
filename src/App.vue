@@ -3,28 +3,32 @@
   <div id="app">
     <div id="nav">
       <Header></Header>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <section class="section">
+        <div class="container">
+            <Article></Article>
+        </div>
+    </section>
     </div>
-    <router-view/>
+   
   </div>
 </template>
 
 <script lang="ts">
-import Header from '@/components/Header.vue';
 import Vue from 'vue';
+import Header from '@/components/Header.vue';
+import Article from '@/components/Article.vue';
 export default Vue.extend({
   components: {
     Header,
+    Article,
   },
 });
 </script>
 
 
-<style lang="scss">
-
+<style lang="scss" scoped>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
