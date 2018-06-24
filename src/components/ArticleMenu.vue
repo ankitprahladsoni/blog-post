@@ -1,6 +1,6 @@
 <template>
-     <section class="" id="article-menu">
-         <div class="box fixed" >
+     <section class="sticky" id="article-menu">
+         <div class="box" >
          <ul>
              <li><a href=# :class="{highlighed:itemToHighlight==1}" @click.prevent="someMethod('1')">some link 1</a></li>
              <li><a href=# :class="{highlighed:itemToHighlight==2}" @click.prevent="someMethod('2')">some link 2</a></li>
@@ -30,7 +30,7 @@ export default Vue.extend({
 
       window.scrollTo({
         top: heightToScroll,
-        behavior: 'smooth',
+        behavior: 'instant',
       });
     },
   },
@@ -38,8 +38,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.fixed {
-  position: fixed;
+.sticky {
+  position: sticky;
+  top: 100px;
 }
 
 .highlighed {
