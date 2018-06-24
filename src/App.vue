@@ -7,7 +7,8 @@
         <div class="container">
             <Article></Article>
         </div>
-    </section>
+     </section>
+     <Footer></Footer>
     </div>
    
   </div>
@@ -17,10 +18,12 @@
 import Vue from 'vue';
 import Header from '@/components/Header.vue';
 import Article from '@/components/Article.vue';
+import Footer from '@/components/Footer.vue';
 export default Vue.extend({
   components: {
     Header,
     Article,
+    Footer,
   },
 });
 </script>
