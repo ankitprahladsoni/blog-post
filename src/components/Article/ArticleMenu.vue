@@ -3,24 +3,19 @@
           <div class="tile is-parent is-vertical">
             <article class="is-child is-success">
               <ul class="has-text-left notification is-success">
-                <li><p href=# 
-                    :class="{highlighed:itemToHighlight==1}" 
+                <li><p :class="{highlighed:itemToHighlight==1}" 
                     @click.prevent="someMethod('1')">Some link 1</p>
                 </li>
-                <li><p href=# 
-                    :class="{highlighed:itemToHighlight==2}" 
+                <li><p :class="{highlighed:itemToHighlight==2}" 
                     @click.prevent="someMethod('2')">Some link 2</p>
                 </li>
-                <li><p href=# 
-                    :class="{highlighed:itemToHighlight==3}" 
+                <li><p :class="{highlighed:itemToHighlight==3}" 
                     @click.prevent="someMethod('3')">Some link 3</p>
                 </li>
-                <li><p href=# 
-                    :class="{highlighed:itemToHighlight==4}" 
+                <li><p :class="{highlighed:itemToHighlight==4}" 
                     @click.prevent="someMethod('4')">Some link 4</p>
                 </li>
-                <li><p href=# 
-                    :class="{highlighed:itemToHighlight==5}" 
+                <li><p :class="{highlighed:itemToHighlight==5}" 
                     @click.prevent="someMethod('5')">Some link 5</p>
                 </li>
               </ul>
