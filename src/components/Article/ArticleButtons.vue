@@ -1,6 +1,7 @@
 <template>
      <section class="sticky" id="article-buttons">
-        <i class="fab fa-github-alt"></i>
+        <i class="fa fa-github-alt"></i>
+        <i class="fa fa-linkedin"></i>
     </section>
 </template>
 
