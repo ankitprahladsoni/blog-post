@@ -2,10 +2,10 @@
      <section class="sticky" id="article-buttons">
             <div class="tile is-parent is-vertical">
                 <article class="tile is-child">
-                    <p class="subtitle"><i class="fab fa-github-alt fa-2x"></i></p>
-                    <p class="subtitle"><i class="fab fa-linkedin fa-2x"></i></p>
-                    <p class="subtitle"><i class="fas fa-share-alt fa-2x"></i></p>
-                    <p class="subtitle"><i class="fas fa-bookmark fa-2x"></i></p>
+                    <p class="subtitle" ><i id="github" class="fab fa-github fa-2x"></i></p>
+                    <p class="subtitle" ><i id="linkedin" class="fab fa-linkedin fa-2x"></i></p>
+                    <p class="subtitle" ><i id="share" class="fas fa-share-alt fa-2x"></i></p>
+                    <p class="subtitle" ><i id="bookmark" class="far fa-bookmark fa-2x"></i></p>
                 </article>
             </div>
     </section>
@@ -21,9 +21,15 @@ export default Vue.extend({});
   position: sticky;
   top: 100px;
 }
- article{
-     color: green;
- }
+
+#linkedin {
+  color: #2b7fa8;
+}
+
+#bookmark {
+  color: #c17527;
+}
+
 </style>
 
 
