@@ -1,7 +1,13 @@
 <template>
      <section class="sticky" id="article-buttons">
-        <i class="fa fa-github-alt"></i>
-        <i class="fa fa-linkedin"></i>
+            <div class="tile is-parent is-vertical">
+                <article class="tile is-child">
+                    <p class="subtitle"><i class="fa fa-github-alt fa-2x"></i></p>
+                    <p class="subtitle"><i class="fa fa-linkedin fa-2x"></i></p>
+                    <p class="subtitle"><i class="fa fa-share-alt fa-2x"></i></p>
+                    <p class="subtitle"><i class="fa fa-bookmark fa-2x"></i></p>
+                </article>
+            </div>
     </section>
 </template>
 
@@ -11,6 +17,10 @@ export default Vue.extend({});
 </script>
 
 <style lang="scss" scoped>
+.sticky {
+  position: sticky;
+  top: 100px;
+}
 </style>
 
 
