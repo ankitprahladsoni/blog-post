@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import ArticleMenu from '@/components/ArticleMenu.vue';
-import ArticleContent from '@/components/ArticleContent.vue';
+import ArticleMenu from './ArticleMenu.vue';
+import ArticleContent from './ArticleContent.vue';
 
 export default Vue.extend({
   components: {
