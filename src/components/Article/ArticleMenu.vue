@@ -58,6 +58,10 @@ export default Vue.extend({
   color: green;
   font-weight: bold;
 }
+
+p{
+  cursor: pointer;
+}
 </style>
 
 

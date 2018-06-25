@@ -22,6 +22,10 @@ export default Vue.extend({});
   top: 100px;
 }
 
+i {
+  cursor: pointer;
+}
+
 #linkedin {
   color: #2b7fa8;
 }
@@ -29,7 +33,6 @@ export default Vue.extend({});
 #bookmark {
   color: #c17527;
 }
-
 </style>
 
 
