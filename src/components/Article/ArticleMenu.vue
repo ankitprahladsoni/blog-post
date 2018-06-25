@@ -1,13 +1,30 @@
 <template>
      <section class="sticky" id="article-menu">
-          <div class="box" >
-            <ul class="has-text-left">
-              <li><a href=# :class="{highlighed:itemToHighlight==1}" @click.prevent="someMethod('1')">some link 1</a></li>
-              <li><a href=# :class="{highlighed:itemToHighlight==2}" @click.prevent="someMethod('2')">some link 2</a></li>
-              <li><a href=# :class="{highlighed:itemToHighlight==3}" @click.prevent="someMethod('3')">some link 3</a></li>
-              <li><a href=# :class="{highlighed:itemToHighlight==4}" @click.prevent="someMethod('4')">some link 4</a></li>
-              <li><a href=# :class="{highlighed:itemToHighlight==5}" @click.prevent="someMethod('5')">some link 5</a></li>
-            </ul>
+          <div class="tile is-parent is-vertical">
+            <article class="is-child is-success">
+              <ul class="has-text-left notification is-success">
+                <li><p href=# 
+                    :class="{highlighed:itemToHighlight==1}" 
+                    @click.prevent="someMethod('1')">Some link 1</p>
+                </li>
+                <li><p href=# 
+                    :class="{highlighed:itemToHighlight==2}" 
+                    @click.prevent="someMethod('2')">Some link 2</p>
+                </li>
+                <li><p href=# 
+                    :class="{highlighed:itemToHighlight==3}" 
+                    @click.prevent="someMethod('3')">Some link 3</p>
+                </li>
+                <li><p href=# 
+                    :class="{highlighed:itemToHighlight==4}" 
+                    @click.prevent="someMethod('4')">Some link 4</p>
+                </li>
+                <li><p href=# 
+                    :class="{highlighed:itemToHighlight==5}" 
+                    @click.prevent="someMethod('5')">Some link 5</p>
+                </li>
+              </ul>
+            </article>
           </div>
     </section>
 </template>
@@ -24,7 +41,7 @@ export default Vue.extend({
 
       const heightToScroll = elements
         .filter(el => divToScroll === el.getAttribute('id'))
-        .map(el => el.offsetTop + 60)
+        .map(el => el.offsetTop + 30)
         .pop();
 
       window.scrollTo({
@@ -45,10 +62,6 @@ export default Vue.extend({
 .highlighed {
   color: green;
   font-weight: bold;
-}
-
-a {
-  color: #17673f;
 }
 </style>
 
