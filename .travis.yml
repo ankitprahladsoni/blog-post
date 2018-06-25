@@ -2,9 +2,15 @@ language: node_js
 node_js: node
 notifications:
   email: false
+addons:
+  sonarcloud:
+    organization: "ankitprahladsoni-github" # the key of the org you chose at step #3
+    token:
+      secure: $SONAR_TOKEN # encrypted value of your token
 script:
 - npm run build
 - npm run test:unit
+- sonar-scanner
 deploy:
   provider: pages
   skip-cleanup: true
