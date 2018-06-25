@@ -1,5 +1,5 @@
 <template>
-     <section class="" id="article-content">
+     <section class="has-text-left" id="article-content">
         <div id="content">
             <div id="1">
                 <h1 class="title is-1" id="1">some link 1</h1>

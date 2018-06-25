@@ -1,8 +1,8 @@
 <template>
         <div class="columns">
                 <div class="column is-2">Buttons Here</div>
-                <div class="column is-7"><article-content @scroll="scrollMethod"></article-content> </div>
-                <div class="column is-3"><article-menu :item-to-highlight="highlightItem"></article-menu></div>
+                <div class="column is-8"><article-content @scroll="scrollMethod"></article-content> </div>
+                <div class="column is-2"><article-menu :item-to-highlight="highlightItem"></article-menu></div>
         </div>
 </template>
 
