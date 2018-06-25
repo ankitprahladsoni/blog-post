@@ -46,6 +46,10 @@ export default Vue.extend({
   color: green;
   font-weight: bold;
 }
+
+a {
+  color: #17673f;
+}
 </style>
 
 
