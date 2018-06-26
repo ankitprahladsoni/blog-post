@@ -1,36 +1,34 @@
 <template>
-     <section class="section expand" id="navbar-section">
-        <nav class="navbar is-fixed-top expand" role="navigation" aria-label="main navigation" style="background: lightblue;">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#" id="avatarDiv">
-                    <img src="https://avatars2.githubusercontent.com/u/8023641" alt="avatar">
-                </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true">sfa</span>
-                    <span aria-hidden="true">safasdf</span>
-                    <span aria-hidden="true">asdfasdfsd</span>
-                </a>
-            </div>
-            <div id="title" class="expand">
-                Strategy Pattern
-            </div>
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item">
-                        Home
-                    </a>
-                    <a class="navbar-item">
-                        About
-                    </a>
-                    <a class="navbar-item">
-                        Contact
-                    </a>
-                </div>
-            </div>
-
-        </nav>
-    </section>
+  <section class="section expand" id="navbar-section">
+    <nav class="navbar is-fixed-top expand" role="navigation" aria-label="main navigation" style="background: lightblue;">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#" id="avatarDiv">
+          <img src="https://avatars2.githubusercontent.com/u/8023641" alt="avatar">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true">sfa</span>
+          <span aria-hidden="true">safasdf</span>
+          <span aria-hidden="true">asdfasdfsd</span>
+        </a>
+      </div>
+      <div id="title" class="expand">
+        Strategy Pattern
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item">
+            Home
+          </a>
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
 </template>
 
 <script lang="ts">
