@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js");
 
 importScripts(
-  "./precache-manifest.5bf2295ccf2e97b936f379e8abeb3865.js"
+  "precache-manifest.d6f55a18ff6a5bdf5be2c098a3c25073.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tech-blog"});
