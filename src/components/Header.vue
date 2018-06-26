@@ -43,11 +43,7 @@ export default Vue.extend({
         '#title',
       );
 
-      if (window.scrollY) {
-        this.collapse(elements);
-      } else {
-        this.expand(elements);
-      }
+      window.scrollY ? this.collapse(elements) : this.expand(elements);
     });
   },
   methods: {

@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import HTMLUtils from '@/utils/html-utils.ts';
+import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   methods: {
     handleScroll(event: Event) {
