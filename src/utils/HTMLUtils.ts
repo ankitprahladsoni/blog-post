@@ -4,4 +4,8 @@ export default class HTMLUtils {
       ...(document.querySelectorAll(selector) as NodeListOf<HTMLElement>),
     ];
   }
+
+  public static getAllElementBySelectors(...selectors: string[]) {
+    return selectors.map(s => document.querySelector(s) as Element);
+  }
 }

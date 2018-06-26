@@ -33,10 +33,11 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   mounted() {
     window.addEventListener('scroll', e => {
-      const elements: Element[] = this.getElementsFromSelectors(
+      const elements: Element[] = HTMLUtils.getAllElementBySelectors(
         'nav',
         '#navbar-section',
         '#title',
@@ -62,10 +63,6 @@ export default Vue.extend({
         classes.add('expand');
         classes.remove('collapse');
       });
-    },
-
-    getElementsFromSelectors(...selectors: string[]) {
-      return selectors.map(s => document.querySelector(s) as Element);
     },
   },
 });
