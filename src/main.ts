@@ -3,9 +3,11 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-import 'bulma/css/bulma.css';
+import 'bulma';
+import Prism from 'prismjs';
 
 Vue.config.productionTip = false;
+Prism.highlightAll();
 
 new Vue({
   router,

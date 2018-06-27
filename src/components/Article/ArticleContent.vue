@@ -21,21 +21,18 @@
       <div id="3">
         <h1 class="title is-1" id="3">The solution</h1>
         <p>Enters the Strategy Pattern. As per the definition, lets make aur class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them as Is-A relationship from parent to child, lets give these behaviours with Has-A relationship.</p>
-      <p>
-        we create an Interface IFlyBehaviour and ISwimBehaviour, and use them as variables in our Duck class.
-
-        IFlyBehaviour may have multiple implementations such as FlyingHighBehavior and NoFlyBehaviour.
-        Same with ISwimBehaviour code below.
-
-      </p>
-      <p>now instead of creating different duck classes, we can have a single duck class with behaviour/strategis than can be easily pluged into them.</p>
-      If we create setters for these strategies, then we can change the behaviour at runtime.
+        <p>
+          we create an Interface IFlyBehaviour and ISwimBehaviour, and use them as variables in our Duck class. IFlyBehaviour may have multiple implementations such as FlyingHighBehavior and NoFlyBehaviour. Same with ISwimBehaviour code below.
+          <pre><code class="language-java"> public interface IFlyBehaviour{
+            public void fly();
+          }</code></pre>
+        </p>
+        <p>now instead of creating different duck classes, we can have a single duck class with behaviour/strategis than can be easily pluged into them.</p>
+        If we create setters for these strategies, then we can change the behaviour at runtime.
       </div>
       <div id="4">
         <h1 class="title is-1" id="4">Other examples</h1>
-        <p>Sorting arrays can have different strategy.
-          Charging a customer based on the time of the day. Day charges and night charges.
-
+        <p>Sorting arrays can have different strategy. Charging a customer based on the time of the day. Day charges and night charges.
         </p>
       </div>
       <div id="5">
