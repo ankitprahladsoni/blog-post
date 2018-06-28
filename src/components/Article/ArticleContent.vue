@@ -1,21 +1,19 @@
 <template>
-  <section class="has-text-left" id="article-content">
-    <div id="content">
-      <div v-for="section in sections" :key="section.id" :id="section.id">
-        <div v-for="(component,index) in section.components" :key="index">
-          <div v-if="component.type=='heading'">
-            <h1 class="title is-2" id="sectionHeading" :data-index="section.id">{{component.value}}</h1>
-          </div>
-          <div v-if="component.type=='paragraph'">
-            <p>{{component.value}}</p>
-          </div>
-          <div v-if="component.type=='code'">
-            <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
-          </div>
+  <div>
+    <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="section.id">
+      <div v-for="(component,index) in section.components" :key="index">
+        <div v-if="component.type=='heading'">
+          <h1 class="title is-2" id="sectionHeading" :data-index="section.id">{{component.value}}</h1>
+        </div>
+        <div v-if="component.type=='paragraph'">
+          <p>{{component.value}}</p>
+        </div>
+        <div v-if="component.type=='code'">
+          <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script lang="ts">
@@ -55,6 +53,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.section {
+  padding: 1.5rem 1.5rem;
+}
 </style>
 
 
