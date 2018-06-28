@@ -29,5 +29,5 @@ export default class HTMLUtils {
     });
   }
 
-  private static readonly headingSelector: string = 'h1[id="sectionHeading"]';
+  private static readonly headingSelector: string = 'h1[id="sectionSubHeading"]';
 }
