@@ -37,7 +37,7 @@ import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   mounted() {
     window.addEventListener('scroll', e => {
-      const elements: Element[] = HTMLUtils.getAllElementBySelectors(
+      const elements = HTMLUtils.getAllElementBySelectors(
         'nav',
         '#navbar-section',
         '#title',
