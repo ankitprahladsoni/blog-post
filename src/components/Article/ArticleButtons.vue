@@ -1,5 +1,5 @@
 <template>
-  <section class="sticky" id="article-buttons">
+  <Sticky>
     <div class="tile is-parent is-vertical">
       <article class="tile is-child">
         <p class="subtitle">
@@ -16,20 +16,20 @@
         </p>
       </article>
     </div>
-  </section>
+  </Sticky>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({});
+import Sticky from '@/components/Sticky.vue';
+export default Vue.extend({
+  components: {
+    Sticky,
+  },
+});
 </script>
 
 <style lang="scss" scoped>
-.sticky {
-  position: sticky;
-  top: 100px;
-}
-
 i {
   cursor: pointer;
 }

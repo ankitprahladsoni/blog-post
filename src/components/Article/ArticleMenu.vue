@@ -1,20 +1,24 @@
 <template>
-  <section class="sticky" id="article-menu">
+  <Sticky>
     <div class="tile is-parent is-vertical">
-        <ul class="has-text-left notification is-success">
-          <li v-for="section in sections" :key="section.id">
-            <p :class="{highlighed:itemToHighlight==section.id}" @click.prevent="scrollToDiv(section.id)">{{getSubHeading(section.components)}}</p>
-          </li>
-        </ul>
+      <ul class="has-text-left notification is-success">
+        <li v-for="section in sections" :key="section.id">
+          <p :class="{highlighed:itemToHighlight==section.id}" @click="scrollToDiv(section.id)">{{getSubHeading(section.components)}}</p>
+        </li>
+      </ul>
     </div>
-  </section>
+  </Sticky>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Sticky from '@/components/Sticky.vue';
 import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   props: ['itemToHighlight', 'sections'],
+  components: {
+    Sticky,
+  },
   methods: {
     scrollToDiv(divIndex: string) {
       HTMLUtils.scrollToDiv(String(divIndex));
@@ -28,11 +32,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.sticky {
-  position: sticky;
-  top: 100px;
-}
-
 .highlighed {
   color: green;
   font-weight: bold;
