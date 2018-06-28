@@ -3,14 +3,10 @@
   <div id="app">
     <div id="nav">
       <Header></Header>
-      <section class="section">
-        <div class="container">
-            <Article></Article>
-        </div>
-     </section>
-     <Footer></Footer>
+      <Article></Article>
+      <Footer></Footer>
     </div>
-   
+
   </div>
 </template>
 
@@ -35,5 +31,6 @@ export default Vue.extend({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  font-size: 1.2rem;
 }
 </style>

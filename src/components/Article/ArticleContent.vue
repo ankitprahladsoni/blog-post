@@ -23,7 +23,7 @@ export default Vue.extend({
   props: ['sections'],
   methods: {
     handleScroll(event: Event) {
-        this.$emit('scroll', HTMLUtils.getIndexToScroll());
+      this.$emit('scroll', HTMLUtils.getIndexToScroll());
     },
 
     formatCode(codeLines: string[]) {
