@@ -7,7 +7,7 @@
       <article-content @scroll="scrollMethod" :sections="sections"></article-content>
     </div>
     <div class="column is-3">
-      <article-menu :item-to-highlight="highlightItem" :sections="sections"></article-menu>
+      <article-menu :div-to-highlight="divIndex" :sections="sections"></article-menu>
     </div>
   </div>
 </template>
@@ -26,13 +26,13 @@ export default Vue.extend({
   },
   data() {
     return {
-      highlightItem: '',
+      divIndex: '',
       sections: require('../../article-content/strategy-pattern.json'),
     };
   },
   methods: {
-    scrollMethod(data: string) {
-      this.highlightItem = data;
+    scrollMethod(divIndex: string) {      
+      this.divIndex = divIndex;
     },
   },
 });

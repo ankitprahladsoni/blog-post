@@ -1,12 +1,11 @@
 <template>
-  <section class="sticky" id="article-menu">
+  <section class="sticky">
     <slot></slot>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-
 export default Vue.extend({});
 </script>
 
