@@ -4,7 +4,7 @@
       <ul class="has-text-left notification is-success">
         <li v-for="section in sections" :key="section.id">
           <p :class="{highlight:divToHighlight==section.id}">
-            <a :href="subHeadingId(section.id)" class="no-underline">{{getSubHeading(section.components)}}</a>
+            <a :href="subHeadingId(section.id)">{{getSubHeading(section.components)}}</a>
           </p>
         </li>
       </ul>
@@ -39,8 +39,8 @@ export default Vue.extend({
   font-weight: bold;
 }
 
-#article-menu {
-  font-size: 1rem;
+.notification a:not(.button) {
+  text-decoration: none;
 }
 </style>
 
