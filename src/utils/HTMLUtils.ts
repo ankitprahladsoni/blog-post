@@ -17,17 +17,5 @@ export default class HTMLUtils {
       .pop();
   }
 
-  public static scrollToDiv(divIndex: string) {
-    const heightToScroll = this.getAllElementsBySelector(this.headingSelector)
-      .filter(el => divIndex === el.dataset.index)
-      .map(el => el.offsetTop - 50)
-      .pop();
-
-    window.scrollTo({
-      top: heightToScroll,
-      behavior: 'instant',
-    });
-  }
-
   private static readonly headingSelector: string = 'h1[id="sectionSubHeading"]';
 }

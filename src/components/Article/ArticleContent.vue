@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="section.id">
+    <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="subHeadingId(section.id)">
       <div v-for="(component,index) in section.components" :key="index">
         <div v-if="component.type==='subHeading'">
           <h1 class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
@@ -29,8 +29,10 @@ export default Vue.extend({
     formatCode(codeLines: string[]) {
       return codeLines.join('\n');
     },
+    subHeadingId(id: string) {
+      return 'heading' + id;
+    },
   },
-
   created() {
     window.addEventListener('scroll', this.handleScroll);
     this.$emit('scroll', 1);
@@ -43,7 +45,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .section {
-  padding: 1.5rem 1.5rem;
+  padding: 3rem 1.5rem 0rem;
 }
 </style>
 

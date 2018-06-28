@@ -3,7 +3,9 @@
     <div class="tile is-parent is-vertical">
       <ul class="has-text-left notification is-success">
         <li v-for="section in sections" :key="section.id">
-          <p :class="{highlight:divToHighlight==section.id}" @click="scrollToDiv(section.id)">{{getSubHeading(section.components)}}</p>
+          <p :class="{highlight:divToHighlight==section.id}">
+            <a :href="subHeadingId(section.id)" class="no-underline">{{getSubHeading(section.components)}}</a>
+          </p>
         </li>
       </ul>
     </div>
@@ -20,12 +22,12 @@ export default Vue.extend({
     Sticky,
   },
   methods: {
-    scrollToDiv(divIndex: string) {
-      HTMLUtils.scrollToDiv(String(divIndex));
-    },
     getSubHeading(components: any[]) {
       return components.find(component => component.type === 'subHeading')
         .value;
+    },
+    subHeadingId(id: string) {
+      return '#heading' + id;
     },
   },
 });
@@ -37,8 +39,8 @@ export default Vue.extend({
   font-weight: bold;
 }
 
-p {
-  cursor: pointer;
+#article-menu {
+  font-size: 1rem;
 }
 </style>
 
