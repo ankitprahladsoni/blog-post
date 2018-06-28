@@ -71,7 +71,11 @@
       },
       {
         "type": "code",
-        "value": ["public interface IFlyBehaviour{", "public void fly();", "}"]
+        "value": [
+          "public interface IFlyBehaviour {",
+          "    public void fly();",
+          "}"
+        ]
       },
       {
         "type": "paragraph",

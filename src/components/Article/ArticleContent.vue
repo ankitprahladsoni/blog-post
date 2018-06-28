@@ -10,7 +10,7 @@
             <p>{{section.value}}</p>
           </div>
           <div v-if="section.type=='code'">
-            <pre><code class="language-java">{{section.value}}</code></pre>
+            <pre><code class="language-java">{{formatCode(section.value)}}</code></pre>
           </div>
         </div>
       </div>
@@ -38,7 +38,12 @@ export default Vue.extend({
         this.$emit('scroll', lastElement.dataset.index);
       }
     },
+
+    formatCode(codeLines: string[]) {
+      return codeLines.join('\n');
+    },
   },
+
   created() {
     window.addEventListener('scroll', this.handleScroll);
     this.$emit('scroll', 1);
