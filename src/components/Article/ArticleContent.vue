@@ -5,10 +5,10 @@
         <div v-if="component.type==='subHeading'">
           <h1 class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
         </div>
-        <div v-if="component.type==='paragraph'">
+        <div v-else-if="component.type==='paragraph'">
           <p>{{component.value}}</p>
         </div>
-        <div v-if="component.type==='code'">
+        <div v-else-if="component.type==='code'">
           <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
         </div>
       </div>
