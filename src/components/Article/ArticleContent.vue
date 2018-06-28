@@ -1,16 +1,16 @@
 <template>
   <section class="has-text-left" id="article-content">
     <div id="content">
-      <div v-for="content in articleContents" :key="content.id" :id="content.id">
-        <div v-for="(section,index) in content.sections" :key="index">
-          <div v-if="section.type=='heading'">
-            <h1 class="title is-1" id="sectionHeading" :data-index="content.id">{{section.value}}</h1>
+      <div v-for="section in sections" :key="section.id" :id="section.id">
+        <div v-for="(component,index) in section.components" :key="index">
+          <div v-if="component.type=='heading'">
+            <h1 class="title is-2" id="sectionHeading" :data-index="section.id">{{component.value}}</h1>
           </div>
-          <div v-if="section.type=='paragraph'">
-            <p>{{section.value}}</p>
+          <div v-if="component.type=='paragraph'">
+            <p>{{component.value}}</p>
           </div>
-          <div v-if="section.type=='code'">
-            <pre><code class="language-java">{{formatCode(section.value)}}</code></pre>
+          <div v-if="component.type=='code'">
+            <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
 import Vue from 'vue';
 import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
-  props: ['articleContents'],
+  props: ['sections'],
   methods: {
     handleScroll(event: Event) {
       const subHeadingSelector = 'h1[id="sectionHeading"]';

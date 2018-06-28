@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "sections": [
+    "components": [
       {
         "type": "heading",
         "value": "What is Strategy Pattern?"
@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "sections": [
+    "components": [
       {
         "type": "heading",
         "value": "Let's dive into a problem statement"
@@ -54,7 +54,7 @@
   },
   {
     "id": 3,
-    "sections": [
+    "components": [
       {
         "type": "heading",
         "value": "The solution"
@@ -86,7 +86,7 @@
   },
   {
     "id": 4,
-    "sections": [
+    "components": [
       {
         "type": "heading",
         "value": "Other examples"
@@ -100,7 +100,7 @@
   },
   {
     "id": 5,
-    "sections": [
+    "components": [
       {
         "type": "heading",
         "value": "Conclusion"
