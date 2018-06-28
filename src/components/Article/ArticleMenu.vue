@@ -30,19 +30,8 @@ import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   props: ['itemToHighlight'],
   methods: {
-    someMethod(divToScroll: string) {
-      const headingCSSSelector = 'div[id="content"]>div>h1';
-      const elements = HTMLUtils.getAllElementsBySelector(headingCSSSelector);
-
-      const heightToScroll = elements
-        .filter(el => divToScroll === el.getAttribute('id'))
-        .map(el => el.offsetTop + 30)
-        .pop();
-
-      window.scrollTo({
-        top: heightToScroll,
-        behavior: 'instant',
-      });
+    someMethod(divIndex: string) {
+      HTMLUtils.scrollToDiv(divIndex);
     },
   },
 });

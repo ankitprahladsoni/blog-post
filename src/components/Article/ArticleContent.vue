@@ -23,18 +23,7 @@ export default Vue.extend({
   props: ['sections'],
   methods: {
     handleScroll(event: Event) {
-      const subHeadingSelector = 'h1[id="sectionHeading"]';
-      const height: number = window.scrollY + 200;
-
-      const lastElement:
-        | HTMLElement
-        | undefined = HTMLUtils.getAllElementsBySelector(subHeadingSelector)
-        .filter(el => el.offsetTop < height)
-        .pop();
-
-      if (lastElement) {
-        this.$emit('scroll', lastElement.dataset.index);
-      }
+        this.$emit('scroll', HTMLUtils.getIndexToScroll());
     },
 
     formatCode(codeLines: string[]) {
