@@ -4,7 +4,7 @@
       <article-buttons></article-buttons>
     </div>
     <div class="column is-8">
-      <article-content @scroll="scrollMethod"></article-content>
+      <article-content @scroll="scrollMethod" :article-contents="articleData"></article-content>
     </div>
     <div class="column is-3">
       <article-menu :item-to-highlight="highlightItem"></article-menu>
@@ -27,6 +27,7 @@ export default Vue.extend({
   data() {
     return {
       highlightItem: '',
+      articleData: require('../../article-content/strategy-pattern.json'),
     };
   },
   methods: {
