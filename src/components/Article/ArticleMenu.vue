@@ -3,7 +3,7 @@
     <div class="tile is-parent is-vertical">
       <ul class="has-text-left notification is-success">
         <li v-for="section in sections" :key="section.id">
-          <p :class="{highlight:divToHighlight===section.id}" @click="scrollToDiv(section.id)">{{getSubHeading(section.components)}}</p>
+          <p :class="{highlight:divToHighlight==section.id}" @click="scrollToDiv(section.id)">{{getSubHeading(section.components)}}</p>
         </li>
       </ul>
     </div>

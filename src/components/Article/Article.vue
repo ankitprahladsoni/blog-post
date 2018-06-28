@@ -31,7 +31,7 @@ export default Vue.extend({
     };
   },
   methods: {
-    scrollMethod(divIndex: string) {      
+    scrollMethod(divIndex: string) {
       this.divIndex = divIndex;
     },
   },
