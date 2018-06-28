@@ -7,7 +7,7 @@
       <article-content @scroll="scrollMethod" :sections="sections"></article-content>
     </div>
     <div class="column is-3">
-      <article-menu :item-to-highlight="highlightItem"></article-menu>
+      <article-menu :item-to-highlight="highlightItem" :sections="sections"></article-menu>
     </div>
   </div>
 </template>
