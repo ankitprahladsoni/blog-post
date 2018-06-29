@@ -15,7 +15,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import Sticky from '@/components/Sticky.vue';
-import HTMLUtils from '@/utils/HTMLUtils';
 export default Vue.extend({
   props: ['divToHighlight', 'sections'],
   components: {
