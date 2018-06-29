@@ -1,6 +1,6 @@
 <template>
   <Sticky>
-    <div class="tile is-parent is-vertical">
+    <div class="tile is-parent is-vertical columns is-vcentered">
       <article class="tile is-child">
         <p class="subtitle">
           <i id="github" class="fab fa-github fa-2x"></i>
