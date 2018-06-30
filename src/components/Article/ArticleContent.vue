@@ -1,12 +1,14 @@
 <template>
   <div>
     <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="subHeadingId(section.id)">
-      <div v-for="(component,index) in section.components" :key="index">
+      <div v-for="(component,index) in section.components" :key="index" id="componentDiv">
         <div v-if="component.type==='subHeading'">
           <h1 class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
         </div>
         <div v-else-if="component.type==='paragraph'">
-          <p>{{component.value}}</p>
+          <p>
+            <span v-html="component.value"></span>
+          </p>
         </div>
         <div v-else-if="component.type==='code'">
           <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
@@ -46,6 +48,10 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .section {
   padding: 3rem 1.5rem 0rem;
+}
+
+#componentDiv {
+  padding: .1em 0em;
 }
 </style>
 
