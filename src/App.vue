@@ -12,7 +12,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import Header from '@/components/Header.vue';
-import Article from '@/components/Article/Article.vue';
 import Footer from '@/components/Footer.vue';
 export default Vue.extend({
   components: {
