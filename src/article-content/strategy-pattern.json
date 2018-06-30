@@ -196,7 +196,7 @@
       {
         "type": "paragraph",
         "value":
-          "It kind of works, but we can't go on and on overriding the methods in each subclass. What's the use of inheritance then? And we are also duplicating a lot of code here in overriding methods that do the exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same check has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms of flexibility and maintenance."
+          "It kind of works, but we can't go on and on overriding the methods in each subclass. And we are also duplicating a lot of code here in overriding methods that do the exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same check has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms of flexibility and maintenance."
       },
       {
         "type": "paragraph",
