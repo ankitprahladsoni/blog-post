@@ -9,12 +9,12 @@
       {
         "type": "paragraph",
         "value":
-          "According to wikipedia, <em>Strategy pattern is a behavioral software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.</em>"
+          "According to Wikipedia, <em>Strategy pattern is a behavioural software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.</em>"
       },
       {
         "type": "paragraph",
         "value":
-          "Don't know about you guys but I sure didn't understrand this definition when I first read it. So let's try to understand it with an example."
+          "Don't know about you guys but I sure didn't understand this definition when I first read it. So let's try to understand it with an example."
       }
     ]
   },
@@ -72,7 +72,7 @@
       {
         "type": "paragraph",
         "value":
-          "If we wish to see these duck fly, we simply add a <code>swim()</code> method in the <code>Duck</code> class, and the subclasses will start to swim. So far so good."
+          "If we wish to see these duck fly, we simply add a <code>fly()</code> method in the <code>Duck</code> class, and the subclasses will start to fly."
       },
       {
         "type": "code",
@@ -104,7 +104,7 @@
       {
         "type": "paragraph",
         "value":
-          "All is going great, but you fail to realize that there's another sublcass <code>RubberDuck</code> present in our system. And oh boy, it too has started flying."
+          "All is going great, but you fail to realize that there's another subclass <code>RubberDuck</code> present in our system. And oh boy, it too has started flying."
       },
       {
         "type": "code",
@@ -155,7 +155,7 @@
       {
         "type": "paragraph",
         "value":
-          "Your boss is happy again.<br/>Good job! You can give yourself a pat in the back."
+          "Your boss is happy again.<br/>Good job! You can give yourself a pat on the back."
       },
       {
         "type": "paragraph",
@@ -196,12 +196,12 @@
       {
         "type": "paragraph",
         "value":
-          "It kind of works, but we can't go on and on overriding the methods in each subclass. What's the use of inheritance then? And we are also duplicating a lot of code here in overriding methods that do exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms for flexibily and maintenance."
+          "It kind of works, but we can't go on and on overriding the methods in each subclass. What's the use of inheritance then? And we are also duplicating a lot of code here in overriding methods that do the exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same check has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms of flexibility and maintenance."
       },
       {
         "type": "paragraph",
         "value":
-          "Inheritance is becoming a mess and we are left with lot of duplicate code with no resuability."
+          "Inheritance is becoming a mess, and we are left with a lot of duplicate code with no reusability."
       }
     ]
   },
@@ -215,17 +215,17 @@
       {
         "type": "paragraph",
         "value":
-          "As we know that many more kinds of ducks will be coming in our system with different behaviours, why not make those behaviours as class variables, which can be easily set in an object?<br/>But how do you make methods as variables you ask."
+          "As we know that many more kinds of ducks will be coming into our system with different behaviours, why not make those behaviours as class variables, which can be easily set in an object?<br/>But how do we make methods as variables you ask?"
       },
       {
         "type": "paragraph",
         "value":
-          "Enters the <em>STRATEGY PATTERN</em>.<br/>As per the definition, let's make aur class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them using <em>Is-A</em> relationship from parent to child, let's inject these behaviours using <em>Has-A</em> relationship."
+          "Enters the <em>STRATEGY PATTERN</em>.<br/>As per the definition, let's make our class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them using <em>IS-A</em> relationship from parent to child, let's inject these behaviours using <em>HAS-A</em> relationship."
       },
       {
         "type": "paragraph",
         "value":
-          "We will create interfaces <code>FlyBehaviour and <code>SwimBehaviour</code>, and use them as variables in our <code>Duck</code> class. <code>FlyBehaviour</code> may have multiple implementations such as <code>FlyWithWingsBehavior</code> and <code>NoFlyBehaviour</code>. Same with <code>SwimBehaviour</code> as shown below."
+          "We will create interfaces <code>FlyBehaviour</code> and <code>SwimBehaviour</code> and use them as variables in our <code>Duck</code> class. <code>FlyBehaviour</code> may have multiple implementations such as <code>FlyWithWingsBehavior</code> and <code>NoFlyBehaviour</code>. Same with <code>SwimBehaviour</code> as shown below."
       },
       {
         "type": "paragraph",
@@ -304,7 +304,7 @@
         "value": [
           "public class Duck {",
           "    FlyBehaviour flyBehaviour;",
-          "    SwimBehaviour SwimBehaviour;",
+          "    SwimBehaviour swimBehaviour;",
           "",
           "    public Duck(FlyBehaviour fb, SwimBehaviour sb){",
           "        flyBehaviour = fb;",
@@ -324,7 +324,7 @@
       {
         "type": "paragraph",
         "value":
-          "Here, we are injecting the behaviours via a constructor. We can use this class like below example."
+          "Here, we are injecting the behaviours via a constructor. We can use this class as:"
       },
       {
         "type": "code",
@@ -350,14 +350,14 @@
       {
         "type": "paragraph",
         "value":
-          "Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's gonna break the functionaly of other ducks.<br/>Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/>For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object."
+          "Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's going to break the functionality of other ducks.<br/>Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/>For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object."
       },
       {
         "type": "code",
         "value": [
           "public class Duck {",
           "    FlyBehaviour flyBehaviour;",
-          "    SwimBehaviour SwimBehaviour;",
+          "    SwimBehaviour swimBehaviour;",
           "    //setters for behaviours",
           "}"
         ]
@@ -377,9 +377,9 @@
         "type": "code",
         "value": [
           "Duck cityDuck = new Duck(new FlyWithWingsBehaviour(), new SwimWithFeetBehaviour());",
-          "System.out.println(\"CityDuck says: \" + woddenDuck.performFly());",
+          "System.out.println(\"CityDuck says: \" + cityDuck.performFly());",
           "cityDuck.setFlyBehaviour(new FlyWithRocketBehaviour())",
-          "System.out.println(\"CityDuck says: \" + woddenDuck.performFly());"
+          "System.out.println(\"CityDuck says: \" + cityDuck.performFly());"
         ]
       },
       {
@@ -392,7 +392,7 @@
       {
         "type": "paragraph",
         "value":
-          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategis than can be easily pluged into them. Just like building a duck using lego blocks.<br/>Now go out and show off your new skills to your colleagues and make then envy you."
+          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategies than can be easily plugged into them. Just like building a duck using Lego blocks.<br/>Now go out and show off your new skills to your colleagues and make then envy you."
       }
     ]
   },
@@ -406,7 +406,7 @@
       {
         "type": "paragraph",
         "value":
-          "<em>\"Hey, I don't code ducks daily at work.\"</em> Well who does? And there are already many places where you can use strategy pattern like:<br/><ul><li>&#183 Sorting list by different strategy. <code>Collections.sort(list, Collections.reverseOrder());</code></li><li>&#183 Zipping a file using different zipping techniques.</li><li>&#183 Storing file to DB, XML or CSV</li><li>&#183 A taxi service charging a customer based on the time of the day. Day charges and night charges.</li></ul>"
+          "<em>\"Hey, I don't code ducks daily at work.\"</em> Well, who does? And there are already many places where you can use strategy pattern like:<br/><ul><li>&#183 Sorting list with different strategies. <code>Collections.sort(list, Collections.reverseOrder());</code></li><li>&#183 Zipping a file using different zipping techniques.</li><li>&#183 Storing content to DB, XML or CSV</li><li>&#183 A taxi service charging a customer based on the time of the day. Day charges and night charges.</li></ul>"
       }
     ]
   },

@@ -47,7 +47,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .section {
-  padding: 3rem 1.5rem 0rem;
+  padding: 2rem 1.5rem 0rem;
 }
 
 #para {
