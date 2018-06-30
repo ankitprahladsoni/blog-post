@@ -27,13 +27,16 @@ export default Vue.extend({
   data() {
     return {
       divIndex: '',
-      sections: require('../../article-content/strategy-pattern.json'),
+      sections: [],
     };
   },
   methods: {
     scrollMethod(divIndex: string) {
       this.divIndex = divIndex;
     },
+  },
+  created() {
+    this.sections = require('../../article-content/strategy-pattern.js').default;
   },
 });
 </script>

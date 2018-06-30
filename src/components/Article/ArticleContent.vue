@@ -28,8 +28,8 @@ export default Vue.extend({
       this.$emit('scroll', HTMLUtils.getIndexToScroll());
     },
 
-    formatCode(codeLines: string[]) {
-      return codeLines.join('\n');
+    formatCode(codeLines: string) {
+      return codeLines.trim();
     },
     subHeadingId(id: string) {
       return 'heading' + id;
