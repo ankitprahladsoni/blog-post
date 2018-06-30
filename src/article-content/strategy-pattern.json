@@ -9,12 +9,12 @@
       {
         "type": "paragraph",
         "value":
-          "According to Wikipedia, <em>Strategy pattern is a behavioural software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.</em>"
+          "According to <a href=\"https://en.wikipedia.org/wiki/Strategy_pattern\">Wikipedia</a>, <em>Strategy pattern is a behavioural software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.</em>"
       },
       {
         "type": "paragraph",
         "value":
-          "Don't know about you guys but I sure didn't understand this definition when I first read it. So let's try to understand it with an example."
+          "Don't know about you guys, but I sure didn't understand this definition when I first read it. So let's try to understand it with an example."
       }
     ]
   },
@@ -215,12 +215,12 @@
       {
         "type": "paragraph",
         "value":
-          "As we know that many more kinds of ducks will be coming into our system with different behaviours, why not make those behaviours as class variables, which can be easily set in an object?<br/>But how do we make methods as variables you ask?"
+          "As we know that many more kinds of ducks will be coming into our system with different behaviours, why not make those behaviours as class variables, which can be easily passed to an object?<br/>But how do we pass these methods as variables you ask?"
       },
       {
         "type": "paragraph",
         "value":
-          "Enters the <em>STRATEGY PATTERN</em>.<br/>As per the definition, let's make our class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them using <em>IS-A</em> relationship from parent to child, let's inject these behaviours using <em>HAS-A</em> relationship."
+          "Enters the <em>STRATEGY PATTERN</em>.<br/>As per the definition, let's make our class select algorithms/strategies/behaviour at runtime. In our case, fly and swim can be of different behaviours. Instead of passing them using <em><a href=\"https://en.wikipedia.org/wiki/Is-a\">IS-A</a></em> relationship from parent to child, let's inject these behaviours using <em><a href=\"https://en.wikipedia.org/wiki/Has-a\">HAS-A</a></em> relationship."
       },
       {
         "type": "paragraph",
@@ -392,7 +392,7 @@
       {
         "type": "paragraph",
         "value":
-          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategies than can be easily plugged into them. Just like building a duck using Lego blocks.<br/>Now go out and show off your new skills to your colleagues and make then envy you."
+          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategies than can be easily plugged into them. Just like building a duck using Lego blocks.<br/>Now go out and show off your new skills to your colleagues and make them envy you."
       }
     ]
   },
@@ -406,7 +406,7 @@
       {
         "type": "paragraph",
         "value":
-          "<em>\"Hey, I don't code ducks daily at work.\"</em> Well, who does? And there are already many places where you can use strategy pattern like:<br/><ul><li>&#183 Sorting list with different strategies. <code>Collections.sort(list, Collections.reverseOrder());</code></li><li>&#183 Zipping a file using different zipping techniques.</li><li>&#183 Storing content to DB, XML or CSV</li><li>&#183 A taxi service charging a customer based on the time of the day. Day charges and night charges.</li></ul>"
+          "<em>\"Hey, I don't code ducks daily at work.\"</em> Well, who does? And there are already many places where you can use the Strategy Pattern, like:<br/><ul><li>&#183 Sorting list with different strategies. <code>Collections.sort(list, Collections.reverseOrder());</code></li><li>&#183 Zipping a file using different zipping techniques.</li><li>&#183 Storing content to DB, XML or CSV</li><li>&#183 A taxi service charging a customer based on the time of the day. Day charges and night charges.</li></ul>"
       }
     ]
   },
