@@ -19,7 +19,6 @@ import ArticleContent from './ArticleContent.vue';
 import ArticleButtons from './ArticleButtons.vue';
 
 export default Vue.extend({
-  props: ['articleId'],
   components: {
     ArticleMenu,
     ArticleContent,
@@ -37,9 +36,7 @@ export default Vue.extend({
     },
   },
   created() {
-    this.sections = require(`../../article-content/${
-      this.articleId
-    }.js`).default;
+    this.sections = require('../../article-content/strategy-pattern.js').default;
   },
 });
 </script>

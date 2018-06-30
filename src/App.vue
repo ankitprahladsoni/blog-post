@@ -1,10 +1,11 @@
 <template>
 
   <div id="app">
-
-    <Header></Header>
-    <router-view></router-view>
-    <Footer></Footer>
+    <div id="nav">
+      <Header></Header>
+      <Article></Article>
+      <Footer></Footer>
+    </div>
 
   </div>
 </template>
@@ -17,6 +18,7 @@ import Footer from '@/components/Footer.vue';
 export default Vue.extend({
   components: {
     Header,
+    Article,
     Footer,
   },
 });
