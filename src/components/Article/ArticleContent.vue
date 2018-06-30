@@ -1,12 +1,12 @@
 <template>
   <div>
     <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="subHeadingId(section.id)">
-      <div v-for="(component,index) in section.components" :key="index" id="componentDiv">
+      <div v-for="(component,index) in section.components" :key="index">
         <div v-if="component.type==='subHeading'">
           <h1 class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
         </div>
         <div v-else-if="component.type==='paragraph'">
-          <p>
+          <p id="para">
             <span v-html="component.value"></span>
           </p>
         </div>
@@ -50,8 +50,8 @@ export default Vue.extend({
   padding: 3rem 1.5rem 0rem;
 }
 
-#componentDiv {
-  padding: .1em 0em;
+#para {
+  padding: 0.5em 0em;
 }
 </style>
 

@@ -124,7 +124,7 @@
       {
         "type": "paragraph",
         "value":
-          "<strong>OH NO!!!</strong> That was unexpected. We don't see rubber ducks flying in real life.<br/> The boss is very angry and wants an immediate fix. What should we do?<br/> Well, we can simply override the fly behaviour in <code>RubberDuck</code> to make it not fly, and we are done for the day."
+          "<strong>OH NO!!!</strong> That was unexpected. We don't see rubber ducks flying in real life.<br/>The boss is very angry and wants an immediate fix. What should we do?<br/>Well, we can simply override the fly behaviour in <code>RubberDuck</code> to make it not fly, and we are done for the day."
       },
       {
         "type": "code",
@@ -160,7 +160,7 @@
       {
         "type": "paragraph",
         "value":
-          "<em>\"But wait, there's more!\"</em> your boss says. The company is planning to add more ducks into the system. Starting with ducks made of wood.<br/> Now, a hardwood duck can neither fly nor swim. Which means that we will have to override both <code>swim()</code> and <code>fly()</code> methods to make it not fly and swim."
+          "<em>\"But wait, there's more!\"</em> your boss says. The company is planning to add more ducks into the system. Starting with ducks made of wood.<br/>Now, a hardwood duck can neither fly nor swim. Which means that we will have to override both <code>swim()</code> and <code>fly()</code> methods to make it not fly and swim."
       },
       {
         "type": "code",
@@ -211,15 +211,16 @@
       {
         "type": "subHeading",
         "value": "The solution"
-      },{
-        "type": "paragraph",
-        "value":
-          "As we know that many more kinds of ducks will be coming in our system with different behaviours, why not make those behaviours as class variables, which can be easily set in an object?<br/> But how do you make methods as variables you ask."
       },
       {
         "type": "paragraph",
         "value":
-          "Enters the <em>STRATEGY PATTERN</em>.<br/> As per the definition, let's make aur class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them using <em>Is-A</em> relationship from parent to child, let's inject these behaviours using <em>Has-A</em> relationship."
+          "As we know that many more kinds of ducks will be coming in our system with different behaviours, why not make those behaviours as class variables, which can be easily set in an object?<br/>But how do you make methods as variables you ask."
+      },
+      {
+        "type": "paragraph",
+        "value":
+          "Enters the <em>STRATEGY PATTERN</em>.<br/>As per the definition, let's make aur class select algorithms at runtime. In our case, fly and swim can be of different algorithms/strategies/behaviour. Instead of passing them using <em>Is-A</em> relationship from parent to child, let's inject these behaviours using <em>Has-A</em> relationship."
       },
       {
         "type": "paragraph",
@@ -228,8 +229,7 @@
       },
       {
         "type": "paragraph",
-        "value":
-          "<strong>FlyBehaviour</strong> and its implementations"
+        "value": "<code>FlyBehaviour</code> and its implementations"
       },
       {
         "type": "code",
@@ -263,8 +263,7 @@
       },
       {
         "type": "paragraph",
-        "value":
-          "<strong>SwimBehaviour</strong> and its implementations"
+        "value": "<code>SwimBehaviour</code> and its implementations"
       },
       {
         "type": "code",
@@ -324,7 +323,8 @@
       },
       {
         "type": "paragraph",
-        "value": "Here, we are injecting the behaviours via a constructor. We can use this class like below example."
+        "value":
+          "Here, we are injecting the behaviours via a constructor. We can use this class like below example."
       },
       {
         "type": "code",
@@ -350,7 +350,7 @@
       {
         "type": "paragraph",
         "value":
-          "Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's gonna break the functionaly of other ducks.<br/>Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/> For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object."
+          "Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's gonna break the functionaly of other ducks.<br/>Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/>For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object."
       },
       {
         "type": "code",
@@ -392,7 +392,7 @@
       {
         "type": "paragraph",
         "value":
-          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategis than can be easily pluged into them. Just like building a duck using lego blocks."
+          "Instead of creating different duck classes, we can have a single duck class with behaviour/strategis than can be easily pluged into them. Just like building a duck using lego blocks.<br/>Now go out and show off your new skills to your colleagues and make then envy you."
       }
     ]
   },
@@ -406,7 +406,7 @@
       {
         "type": "paragraph",
         "value":
-          "Sorting arrays can have different strategy. Charging a customer based on the time of the day. Day charges and night charges."
+          "<em>\"Hey, I don't code ducks daily at work.\"</em> Well who does? And there are already many places where you can use strategy pattern like:<br/><ul><li>&#183 Sorting list by different strategy. <code>Collections.sort(list, Collections.reverseOrder());</code></li><li>&#183 Zipping a file using different zipping techniques.</li><li>&#183 Storing file to DB, XML or CSV</li><li>&#183 A taxi service charging a customer based on the time of the day. Day charges and night charges.</li></ul>"
       }
     ]
   },
