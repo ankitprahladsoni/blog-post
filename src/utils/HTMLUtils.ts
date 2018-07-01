@@ -9,6 +9,17 @@ export default class HTMLUtils {
     return selectors.map(s => document.querySelector(s) as Element);
   }
 
+  public static getHTMLElementBySelector(selector: string) {
+    return document.querySelector(selector) as HTMLElement;
+  }
+
+  public static getHTMLElementByElAndSelector(
+    el: HTMLElement,
+    selector: string,
+  ) {
+    return el.querySelector(selector) as HTMLElement;
+  }
+
   public static getIndexToScroll() {
     const height: number = window.scrollY + 100;
     return this.getAllElementsBySelector(this.headingSelector)
@@ -17,5 +28,6 @@ export default class HTMLUtils {
       .pop();
   }
 
-  private static readonly headingSelector: string = 'h1[id="sectionSubHeading"]';
+  private static readonly headingSelector: string =
+    'h1[id="sectionSubHeading"]';
 }

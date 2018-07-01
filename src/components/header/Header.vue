@@ -1,6 +1,6 @@
 <template>
   <section class="section expand" id="navbar-section">
-    <nav class="navbar is-fixed-top expand" role="navigation" aria-label="main navigation" style="background: lightblue;">
+    <nav class="navbar is-fixed-top expand" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#" id="avatarDiv">
           <img src="https://avatars2.githubusercontent.com/u/8023641" alt="avatar">
@@ -11,22 +11,7 @@
           <span aria-hidden="true">asdfasdfsd</span>
         </a>
       </div>
-      <div id="title" class="expand">
-        Strategy Pattern
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item">
-            Home
-          </a>
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-        </div>
-      </div>
+      <nav-menu/>
     </nav>
   </section>
 </template>
@@ -34,13 +19,16 @@
 <script lang="ts">
 import Vue from 'vue';
 import HTMLUtils from '@/utils/HTMLUtils';
+import NavMenu from './NavMenu.vue';
 export default Vue.extend({
+  components: {
+    NavMenu,
+  },
   mounted() {
     window.addEventListener('scroll', e => {
       const elements = HTMLUtils.getAllElementBySelectors(
         'nav',
         '#navbar-section',
-        '#title',
       );
 
       window.scrollY ? this.collapse(elements) : this.expand(elements);
@@ -92,12 +80,6 @@ nav.expand {
   height: $expandedHeight;
   align-items: flex-end;
   transition: all 0.5s ease;
-
-  div div.navbar-menu {
-    transition: all 0.5s ease;
-    height: $expandedHeight;
-    align-items: flex-end;
-  }
 }
 
 nav.collapse {
@@ -106,11 +88,6 @@ nav.collapse {
   transition: all 0.5s ease;
 
   div {
-    div.navbar-menu {
-      transition: all 0.5s ease;
-      height: $collapsedHeight;
-    }
-
     a img {
       transition: all 0.5s ease;
       height: $collapsedHeight;
@@ -128,24 +105,12 @@ nav.collapse {
   }
 }
 
-#title {
-  width: 100%;
-  text-align: center;
-  font-family: unset;
-
-  &.expand {
-    font-size: 100px;
-    transition: all 0.5s ease;
-  }
-
-  &.collapse {
-    font-size: 40px;
-    transition: all 0.5s ease;
-  }
-}
-
 #avatarDiv {
   padding-bottom: 0px;
+}
+
+.navbar{
+  background: linear-gradient(to left, #0575E6 0%, #021B79 100%);
 }
 </style>
 
