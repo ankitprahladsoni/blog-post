@@ -17,9 +17,10 @@ import Vue from 'vue';
 import ArticleMenu from './ArticleMenu.vue';
 import ArticleContent from './ArticleContent.vue';
 import ArticleButtons from './ArticleButtons.vue';
+import ContentLoader from '@/article-content/ContentLoader.ts';
 
 export default Vue.extend({
-  props: ['articleId'],
+  props: ['articleParams'],
   components: {
     ArticleMenu,
     ArticleContent,
@@ -37,9 +38,10 @@ export default Vue.extend({
     },
   },
   created() {
-    this.sections = require(`../../article-content/${
-      this.articleId
-    }.js`).default;
+    this.sections = ContentLoader.getArticle(
+      this.articleParams.folder,
+      this.articleParams.name,
+    );
   },
 });
 </script>

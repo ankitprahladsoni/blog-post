@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Article :article-id="$route.params.id"/>
+    <Article :article-params="$route.params" />
   </div>
 </template>
 
