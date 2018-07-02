@@ -109,8 +109,8 @@ nav.collapse {
   padding-bottom: 0px;
 }
 
-.navbar{
-  background: linear-gradient(to left, #0575E6 0%, #021B79 100%);
+.navbar {
+  background: linear-gradient(to left, #021b79 0%, #0575e6 100%);
 }
 </style>
 

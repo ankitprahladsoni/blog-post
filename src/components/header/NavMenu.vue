@@ -163,9 +163,11 @@ nav ul {
 }
 
 .button.is-info.is-outlined {
-  background: #fff;
+  background: #209cee;
+  color:#fff;
   &:hover {
-    background: #209cee;
+    background: #fff;
+    color:#209cee;
   }
 }
 </style>

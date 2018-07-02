@@ -1,14 +1,12 @@
 <template>
   <Sticky id="article-menu">
-    <div class="tile is-parent is-vertical">
-      <ul class="has-text-left notification is-success">
-        <li v-for="section in sections" :key="section.id">
-          <p :class="{highlight:divToHighlight==section.id}">
-            <router-link :to="subHeadingId(section.id)">{{getSubHeading(section.components)}}</router-link>
-          </p>
+    <article class="message is-info">
+      <ul class="message-body has-text-left">
+        <li v-for="section in sections" :key="section.id" :class="{active:divToHighlight==section.id}">
+          <router-link :to="subHeadingId(section.id)">{{getSubHeading(section.components)}}</router-link>
         </li>
       </ul>
-    </div>
+    </article>
   </Sticky>
 </template>
 
@@ -33,12 +31,19 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.highlight {
-  color: green;
-  font-weight: bold;
+a {
+  color: #23d160;
 }
 
-.notification a:not(.button) {
+li {
+  padding: 0.2em;
+}
+
+.active {
+  background: linear-gradient(to right, #c2e7fd, #f6fbfe 60%);
+}
+
+.message a:not(.button):not(.tag) {
   text-decoration: none;
 }
 </style>
