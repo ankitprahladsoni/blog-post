@@ -76,8 +76,7 @@ System.out.println("CityDuck says: " + cityDuck.fly());
     },
     {
       type: 'paragraph',
-      value:
-        "All is going great, but you fail to realize that there's another subclass <code>RubberDuck</code> present in our system. And oh boy, it too has started flying.",
+      value: `All is going great, but you fail to realize that there's another subclass <code>RubberDuck</code> present in our system. And oh boy, it too has started flying.`,
     },
     {
       type: 'code',
@@ -166,8 +165,7 @@ System.out.println("WoddenDuck says: " + woddenDuck.fly());
     },
     {
       type: 'paragraph',
-      value:
-        "It kind of works, but we can't go on and on overriding the methods in each subclass. And we are also duplicating a lot of code here in overriding methods that do the exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same check has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms of flexibility and maintenance.",
+      value: `It kind of works, but we can't go on and on overriding the methods in each subclass. And we are also duplicating a lot of code here in overriding methods that do the exact same thing. Here we have the same code in <code>fly()</code> method for both <code>RubberDuck</code> and <code>WoddenDuck</code>. The same check has to be done for each new method added in base class <code>Duck</code>.<br>It looks like our choice of design wasn't very useful in terms of flexibility and maintenance.`,
     },
     {
       type: 'paragraph',

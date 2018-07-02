@@ -142,8 +142,8 @@ System.out.println("WoddenDuck says: " + woddenDuck.performSwim());
     },
     {
       type: 'paragraph',
-      value:
-        "Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's going to break the functionality of other ducks.<br/>Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/>For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object.",
+      value: `Cool, isn't it? We no longer have to worry about many subclasses of <code>Duck</code>, because we have <strong>none</strong>. At the same time, we can create as many ducks as we want, with many combinations of flying and swimming behaviours, without worrying if it's going to break the         functionality of other ducks.<br/>
+        Not only that, if we were to have setters for each behaviour, we can simply change the behaviour at runtime by giving a new instance of the behaviour to the duck.<br/>For example, we want our ducks to fly using a rocket booster instead of wings, then we just have to create a new behaviour <code>FlyWithRocketBehaviour</code>, and set it to our <code>Duck</code> object.`,
     },
     {
       type: 'code',
