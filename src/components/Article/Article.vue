@@ -1,13 +1,13 @@
 <template>
   <div class="columns">
-    <div class="column is-3">
-      <article-menu :div-to-highlight="divIndex" :sections="sections"></article-menu>
+    <div class="column is-1">
+      <article-buttons></article-buttons>
     </div>
     <div class="column is-8">
       <article-content @scroll="scrollMethod" :sections="sections"></article-content>
     </div>
-    <div class="column is-1">
-      <article-buttons></article-buttons>
+    <div class="column is-3">
+      <article-menu :div-to-highlight="divIndex" :sections="sections"></article-menu>
     </div>
   </div>
 </template>
