@@ -4,7 +4,7 @@
       <ul class="has-text-left notification is-success">
         <li v-for="section in sections" :key="section.id">
           <p :class="{highlight:divToHighlight==section.id}">
-            <a :href="subHeadingId(section.id)">{{getSubHeading(section.components)}}</a>
+            <router-link :to="subHeadingId(section.id)">{{getSubHeading(section.components)}}</router-link>
           </p>
         </li>
       </ul>

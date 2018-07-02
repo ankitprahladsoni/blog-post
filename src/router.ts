@@ -18,4 +18,11 @@ export default new Router({
       component: About,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+      };
+    }
+  },
 });
