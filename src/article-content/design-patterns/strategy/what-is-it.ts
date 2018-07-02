@@ -13,7 +13,7 @@ export default {
     {
       type: 'paragraph',
       value:
-        "Don't know about you guys, but I sure didn't understand this definition when I first read it. So let's try to understand it with an example.",
+        `Don't know about you guys, but I sure didn't understand this definition when I first read it. So let's try to understand it with an example.`,
     },
   ],
 };

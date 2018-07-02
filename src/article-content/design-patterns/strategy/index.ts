@@ -1,5 +1,5 @@
 export function getArticle() {
-  const article=[];
+  const article = [];
   article.push(require('./what-is-it').default);
   article.push(require('./problem-statement').default);
   article.push(require('./the-solution').default);
