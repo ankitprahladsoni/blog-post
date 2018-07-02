@@ -11,7 +11,7 @@
           </p>
         </div>
         <div v-else-if="component.type==='code'">
-          <pre><code class="language-java">{{formatCode(component.value)}}</code></pre>
+          <pre><code class="language-java">{{component.value.trim()}}</code></pre>
         </div>
       </div>
     </section>
@@ -28,9 +28,6 @@ export default Vue.extend({
       this.$emit('scroll', HTMLUtils.getIndexToScroll());
     },
 
-    formatCode(codeLines: string) {
-      return codeLines.trim();
-    },
     subHeadingId(id: string) {
       return 'heading' + id;
     },
