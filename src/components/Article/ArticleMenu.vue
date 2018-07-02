@@ -1,7 +1,7 @@
 <template>
   <Sticky id="article-menu">
     <article class="message is-info">
-      <ul class="message-body has-text-left">
+      <ul class="message-body">
         <li v-for="section in sections" :key="section.id" :class="{active:divToHighlight==section.id}">
           <router-link :to="subHeadingId(section.id)">{{getSubHeading(section.components)}}</router-link>
         </li>
@@ -24,7 +24,7 @@ export default Vue.extend({
         .value;
     },
     subHeadingId(id: string) {
-      return '#heading' + id;
+      return `#heading${id}`;
     },
   },
 });
