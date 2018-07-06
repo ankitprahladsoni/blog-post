@@ -2,17 +2,10 @@
   <div>
     <section class="section has-text-left" v-for="section in sections" :key="section.id" :id="subHeadingId(section.id)">
       <div v-for="(component,index) in section.components" :key="index">
-        <div v-if="component.type==='subHeading'">
-          <h1 class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
-        </div>
-        <div v-else-if="component.type==='paragraph'">
-          <p id="para">
-            <span v-html="component.value"></span>
-          </p>
-        </div>
-        <div v-else-if="component.type==='code'">
-          <pre><code class="language-java">{{component.value.trim()}}</code></pre>
-        </div>
+        <h1 v-if="component.type==='subHeading'" class="title is-2" id="sectionSubHeading" :data-index="section.id">{{component.value}}</h1>
+        <p v-else-if="component.type==='paragraph'" id="para" v-html="component.value" />
+        <pre v-else-if="component.type==='code'"><code class="language-java">{{component.value.trim()}}</code></pre>
+        <img v-else-if="component.type==='img'" :src="component.value" alt="" />
       </div>
     </section>
   </div>
