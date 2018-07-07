@@ -42,5 +42,8 @@ export default Vue.extend({
 
 #para {
   padding: 0.5em 0em;
+  /deep/ ul {
+    list-style-type: disc;
+  }
 }
 </style>

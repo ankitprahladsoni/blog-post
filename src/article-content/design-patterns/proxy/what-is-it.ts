@@ -11,12 +11,12 @@ export default {
     },
     {
       type: 'paragraph',
-      value: `They are further divided into <ul>
-        <li>Virtual Proxy: caching an object which is expensive to create.</li>
-        <li>Remote Proxy: acts as a local representation of an object which may reside on a different machine, heap or location.</li>
-        <li>Protection Proxy: adds security to check if the client has access to call the real object or not.</li>
-        </ul>
-        <br/>
+      value: `They are further divided into:
+       <ul>
+       <li><strong>Remote Proxy</strong>: acts as a local representation of an object which may reside on a different machine, heap or location.</li>
+       <li><strong>Protection Proxy</strong>: adds security to check if the client has access to call the real object or not.</li>
+       <li><strong>Virtual Proxy</strong>: caching an object which is expensive to create.</li>
+       </ul>
         Let's take an example to understand Virtual Proxy.`,
     },
   ],
